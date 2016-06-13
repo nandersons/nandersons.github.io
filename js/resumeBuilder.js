@@ -58,7 +58,7 @@ var work = {
     "employer" : "Sequoia Consulting Group",
     "years_worked" : "January 2015 - Present",
     "location" : "Springfield, Illinois",
-    "descript" : "In the midst of one of the worst financial decades in Illinois, our expert consulting services secures millions of dollars in federal funding every year for our client and helps keep the doors open at their agency.",
+    "descript" : "In the midst of one of the worst financial decades in Illinois, our expert consulting services secure millions of dollars in federal funding every year for our client and helps keep the doors open at their agency.",
     display : function myFunction() {}
 };
 
