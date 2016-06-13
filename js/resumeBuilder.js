@@ -177,7 +177,11 @@ if (bio.skills.length > 0) {
     $("#footerContacts").append(formattedLocation);
 }
 //Logs X and Y locations of user clicks on the page
-
+$(document).click(function(loc) {
+    var x = loc.pageX;
+    var y = loc.pageY;
+    logClicks(x, y);
+});
 
 //Creats a clickable button that converts my name on the page to an "internationalized" version of itself
 $("#main").append(internationalizeButton);
