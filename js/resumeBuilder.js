@@ -21,7 +21,7 @@ var bio = {
     },
     "picture" : "images/mypic.JPG",
     "welcome_message" : "Welcome to my Resume",
-    "skills" : ["HTML", " CSS", " JavaScript"],
+    "skills" : ["HTML", "CSS", "JavaScript", "Git"],
     display : function myFunction() {}
 };
 
