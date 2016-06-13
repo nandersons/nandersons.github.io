@@ -193,7 +193,7 @@ function inName(name) {
 };
 
 function mapFunction() {
-    $("#mapDiv").append(googleMap);
+    $("#mapDiv").append("googleMap");
 }
 
 mapFunction()
