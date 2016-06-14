@@ -54,40 +54,44 @@ if (bio.skills.length > 0) {
 
 //work JSON
 var work = {
-    "current_job" : "Consultant",
-    "employer" : "Sequoia Consulting Group",
-    "years_worked" : "January 2015 - Present",
-    "location" : "Springfield, Illinois",
-    "descript" : "In the midst of one of the worst financial decades in Illinois, our expert consulting services secure millions of dollars in federal funding every year for our client and helps keep the doors open at their agency.",
+    "jobs" : [{
+        "current_job" : "Consultant",
+        "employer" : "Sequoia Consulting Group",
+        "years_worked" : "January 2015 - Present",
+        "location" : "Springfield, Illinois",
+        "descript" : "In the midst of one of the worst financial decades in Illinois, our expert consulting services secure millions of dollars in federal funding every year for our client and helps keep the doors open at their agency."
+    }],
     display : function myFunction() {}
-};
+}
 
 //work
-if (work.current_job.length > 0) {
+if (work.jobs.length > 0) {
     $("#workExperience").append(HTMLworkStart);
-    var formattedEmployer = HTMLworkEmployer.replace("%data%", work.employer);
-    var formattedTitle = HTMLworkTitle.replace("%data%", work.current_job);
+    var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[0].employer);
+    var formattedTitle = HTMLworkTitle.replace("%data%", work.jobs[0].current_job);
     var formattedEmployerTitle = formattedEmployer + formattedTitle;
     $(".work-entry:last").append(formattedEmployerTitle);
-    var formattedDates = HTMLworkDates.replace("%data%", work.years_worked);
+    var formattedDates = HTMLworkDates.replace("%data%", work.jobs[0].years_worked);
     $(".work-entry:last").append(formattedDates);
-    var formattedLocation = HTMLworkLocation.replace("%data%", work.location);
+    var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[0].location);
     $(".work-entry:last").append(formattedLocation);
-    var formattedDescription = HTMLworkDescription.replace("%data%", work.descript);
+    var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[0].descript);
     $(".work-entry:last").append(formattedDescription);
 };
 
 //projects JSON
 var projects = {
-    "portfolio" : "my portfolio",
+    "projects" : [{
+        "portfolio" : "my portfolio",
+    }],
     display : function myFunction() {}
-};
+}
 
 
 //projects
-if (projects.portfolio.length > 0) {
+if (projects.projects.length > 0) {
     $("#projects").append(HTMLprojectStart);
-    var formattedTitle = HTMLprojectTitle.replace("%data%", projects.portfolio);
+    var formattedTitle = HTMLprojectTitle.replace("%data%", projects.projects[0].portfolio);
     $(".project-entry:last").append(formattedTitle);
 };
 //var education = {};
@@ -98,7 +102,7 @@ if (projects.portfolio.length > 0) {
 
 //education JSON
 var education = {
-    "schools" : {
+    "schools" : [{
         "school": "Southern Illinois University Carbondale",
         "location" : "Carbondale, Illinois",
         "dates" : "2008-2015",
@@ -107,7 +111,7 @@ var education = {
             "graduate" : "Masters of Public Administration, MPA",
             "minor" : "Forensic Science, Minor"
         },
-    },
+    }],
     "onlineCourses" :
     [{
         "course" : "Intro to Computer Science",
@@ -128,19 +132,19 @@ var education = {
 };
 
 //education
-if (education.schools.school.length > 0) {
+if (education.schools.length > 0) {
     $("#education").append(HTMLschoolStart);
-    var formattedSchool = HTMLschoolName.replace("%data%", education.schools.school);
+    var formattedSchool = HTMLschoolName.replace("%data%", education.schools[0].school);
     $(".education-entry:last").append(formattedSchool);
-    var formattedSchoolDegreeU = HTMLschoolDegree.replace("%data%", education.schools.majors.undergraduate);
+    var formattedSchoolDegreeU = HTMLschoolDegree.replace("%data%", education.schools[0].majors.undergraduate);
     $(".education-entry:last").append(formattedSchoolDegreeU);
-    var formattedSchoolDegreeM = HTMLschoolDegree.replace("%data%", education.schools.majors.graduate);
+    var formattedSchoolDegreeM = HTMLschoolDegree.replace("%data%", education.schools[0].majors.graduate);
     $(".education-entry:last").append(formattedSchoolDegreeM);
-    var formattedSchoolDegreeP = HTMLschoolDegree.replace("%data%", education.schools.majors.minor);
+    var formattedSchoolDegreeP = HTMLschoolDegree.replace("%data%", education.schools[0].majors.minor);
     $(".education-entry:last").append(formattedSchoolDegreeP);
-    var formattedSchoolDates = HTMLschoolDates.replace("%data%", education.schools.dates);
+    var formattedSchoolDates = HTMLschoolDates.replace("%data%", education.schools[0].dates);
     $(".education-entry:last").append(formattedSchoolDates);
-    var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", education.schools.location);
+    var formattedSchoolLocation = HTMLschoolLocation.replace("%data%", education.schools[0].location);
     $(".education-entry:last").append(formattedSchoolLocation);
     $(".education-entry:last").append(HTMLonlineClasses);
     var formattedTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[0].course);
