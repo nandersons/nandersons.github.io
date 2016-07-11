@@ -37,7 +37,7 @@ var HTMLworkLocation = '<div class="location-text">%data%</div>';
 var HTMLworkDescription = '<p><br>%data%</p>';
 
 var HTMLprojectStart = '<div class="project-entry"></div>';
-var HTMLprojectTitle = '<a href="http://codepen.io/nandersons/pen/WxkKjQ' target="_blank" style="margin-top: 0px; margin-bottom: 10px;">%data%</a>';
+var HTMLprojectTitle = '<a href="http://codepen.io/nandersons/pen/WxkKjQ style="margin-top: 0px; margin-bottom: 10px;">%data%</a>';
 var HTMLprojectDates = '<div class="date-text">%data%</div>';
 var HTMLprojectDescription = '<p><br>%data%</p>';
 var HTMLprojectImage = '<img src="%data%">';
